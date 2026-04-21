@@ -1,0 +1,215 @@
+/* ============================================
+   AYODHYA TRAVEL - PLACES PAGE STYLES
+   ============================================ */
+
+/* === Page Hero === */
+.page-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.page-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.3) saturate(1.3);
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 10, 15, 0.4), rgba(10, 10, 15, 0.9));
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.page-hero-content h1 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h1);
+  color: white;
+  letter-spacing: 3px;
+  margin-bottom: var(--space-md);
+}
+
+.page-hero-content p {
+  font-family: var(--font-accent);
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  font-size: var(--fs-caption);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.breadcrumb a {
+  color: var(--color-saffron);
+}
+
+.breadcrumb span {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* === Places Filter === */
+.places-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-3xl);
+}
+
+.filter-btn {
+  padding: 10px 24px;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--color-dark-text-muted);
+  border: 1px solid var(--color-dark-border);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--color-saffron);
+  color: white;
+  border-color: var(--color-saffron);
+}
+
+/* === Place Detail Card === */
+.place-detail-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+  padding: var(--space-3xl) 0;
+  border-bottom: 1px solid var(--color-dark-border);
+}
+
+.place-detail-card:nth-child(even) {
+  direction: rtl;
+}
+
+.place-detail-card:nth-child(even)>* {
+  direction: ltr;
+}
+
+.place-detail-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+}
+
+.place-detail-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.place-detail-image:hover img {
+  transform: scale(1.05);
+}
+
+.place-detail-info h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  color: var(--color-cream);
+  margin-bottom: var(--space-md);
+}
+
+.place-detail-info .place-category {
+  display: inline-block;
+  padding: 4px 14px;
+  background: rgba(255, 107, 0, 0.15);
+  color: var(--color-saffron);
+  font-size: var(--fs-caption);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-lg);
+}
+
+.place-detail-info p {
+  font-size: var(--fs-body);
+  margin-bottom: var(--space-lg);
+}
+
+.place-meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.place-meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: var(--fs-small);
+  color: var(--color-dark-text-muted);
+}
+
+.place-meta-item .meta-icon {
+  color: var(--color-saffron);
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+/* === Places Grid View === */
+.places-grid-view {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+@media (max-width: 1024px) {
+  .place-detail-card {
+    grid-template-columns: 1fr;
+  }
+
+  .place-detail-card:nth-child(even) {
+    direction: ltr;
+  }
+
+  .places-grid-view {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .places-grid-view {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero {
+    height: 40vh;
+    min-height: 300px;
+  }
+}

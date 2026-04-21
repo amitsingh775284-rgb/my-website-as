@@ -1,0 +1,269 @@
+/* ============================================
+   AYODHYA TRAVEL - TRAVEL GUIDE PAGE STYLES
+   ============================================ */
+
+/* === Travel Info Cards === */
+.travel-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.travel-info-card {
+  background: var(--color-dark-card);
+  border: 1px solid var(--color-dark-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.travel-info-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-saffron), var(--color-gold));
+  transform: scaleX(0);
+  transition: transform var(--transition-normal);
+  transform-origin: left;
+}
+
+.travel-info-card:hover::before {
+  transform: scaleX(1);
+}
+
+.travel-info-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 107, 0, 0.2);
+}
+
+.travel-info-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-lg);
+}
+
+.travel-info-card h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  color: var(--color-cream);
+  margin-bottom: var(--space-md);
+}
+
+.travel-info-card p {
+  font-size: var(--fs-small);
+  line-height: 1.8;
+}
+
+.travel-info-card ul {
+  margin-top: var(--space-md);
+}
+
+.travel-info-card li {
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-dark-border);
+  font-size: var(--fs-small);
+  color: var(--color-dark-text-muted);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.travel-info-card li:last-child {
+  border-bottom: none;
+}
+
+.travel-info-card li::before {
+  content: '→';
+  color: var(--color-saffron);
+  font-weight: bold;
+}
+
+/* === Timeline === */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 40px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--color-saffron), var(--color-gold));
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: var(--space-2xl);
+  padding-left: var(--space-xl);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -32px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+  background: var(--color-saffron);
+  border: 3px solid var(--color-dark-bg);
+  box-shadow: 0 0 10px var(--color-saffron-glow);
+}
+
+.timeline-date {
+  font-size: var(--fs-caption);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-saffron);
+  margin-bottom: var(--space-sm);
+}
+
+.timeline-content {
+  background: var(--color-dark-card);
+  border: 1px solid var(--color-dark-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+}
+
+.timeline-content h4 {
+  font-family: var(--font-display);
+  color: var(--color-cream);
+  margin-bottom: var(--space-sm);
+}
+
+.timeline-content p {
+  font-size: var(--fs-small);
+}
+
+/* === Weather Table === */
+.weather-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-top: var(--space-xl);
+}
+
+.weather-table thead {
+  background: linear-gradient(135deg, var(--color-saffron-dark), var(--color-maroon));
+}
+
+.weather-table th {
+  padding: var(--space-md) var(--space-lg);
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  text-align: left;
+}
+
+.weather-table td {
+  padding: var(--space-md) var(--space-lg);
+  font-size: var(--fs-small);
+  color: var(--color-dark-text-muted);
+  border-bottom: 1px solid var(--color-dark-border);
+}
+
+.weather-table tbody tr {
+  background: var(--color-dark-card);
+  transition: background var(--transition-normal);
+}
+
+.weather-table tbody tr:hover {
+  background: rgba(255, 107, 0, 0.05);
+}
+
+.weather-table .best-season {
+  color: var(--color-saffron);
+  font-weight: 600;
+}
+
+/* === FAQ Accordion === */
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border: 1px solid var(--color-dark-border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-md);
+  overflow: hidden;
+  transition: border-color var(--transition-normal);
+}
+
+.faq-item.active {
+  border-color: rgba(255, 107, 0, 0.3);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg) var(--space-xl);
+  cursor: pointer;
+  background: var(--color-dark-card);
+  transition: background var(--transition-normal);
+}
+
+.faq-question:hover {
+  background: rgba(255, 107, 0, 0.05);
+}
+
+.faq-question h4 {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  color: var(--color-cream);
+}
+
+.faq-icon {
+  color: var(--color-saffron);
+  font-size: 1.2rem;
+  transition: transform var(--transition-normal);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-slow);
+}
+
+.faq-answer-content {
+  padding: 0 var(--space-xl) var(--space-xl);
+}
+
+.faq-answer p {
+  font-size: var(--fs-small);
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .travel-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    padding-left: 30px;
+  }
+
+  .weather-table {
+    font-size: var(--fs-caption);
+  }
+}

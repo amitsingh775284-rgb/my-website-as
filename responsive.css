@@ -1,0 +1,168 @@
+/* ============================================
+   AYODHYA TRAVEL - RESPONSIVE STYLES
+   ============================================ */
+
+/* === Tablet (max-width: 1024px) === */
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .timeline-item {
+    padding-left: 30px;
+  }
+}
+
+/* === Mobile Large (max-width: 768px) === */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 350px;
+    height: 100vh;
+    background: rgba(10, 10, 15, 0.98);
+    backdrop-filter: var(--glass-blur);
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-2xl);
+    transition: right var(--transition-slow);
+    border-left: 1px solid var(--color-dark-border);
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+  }
+
+  .hero-content {
+    padding: 0 var(--space-md);
+  }
+
+  .section {
+    padding: var(--space-3xl) 0;
+  }
+
+  .section-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .btn {
+    padding: 12px 28px;
+    font-size: var(--fs-caption);
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .travel-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-slider {
+    flex-direction: column;
+  }
+}
+
+/* === Mobile Small (max-width: 480px) === */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .stats-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nav-links {
+    width: 100%;
+    max-width: none;
+  }
+
+  .card-body {
+    padding: var(--space-lg);
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-label::before,
+  .section-label::after {
+    width: 20px;
+  }
+}
+
+/* === Print Styles === */
+@media print {
+  .navbar,
+  .back-to-top,
+  .particles-container,
+  .hero-video-overlay {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+}
