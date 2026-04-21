@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stunning photo gallery of Ayodhya - Ram Mandir, ancient temples, sacred ghats, festivals and more. Experience the beauty through images.">
+  <title>Photo Gallery - Ayodhya Dham Travel</title>
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕉</text></svg>">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/places.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="page-loader"><div class="loader-om">🕉</div></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><span class="logo-icon">🏛</span> AYODHYA DHAM</a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="places.html">Places</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="guide.html">Travel Guide</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <header class="page-hero">
+    <div class="page-hero-bg">
+      <img src="images/ayodhya_option_7.png" alt="Ayodhya Gallery">
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <h1>Photo Gallery</h1>
+      <p>Capturing the divine beauty of Ayodhya through the lens</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <span>/</span> <span>Gallery</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Gallery Section -->
+  <section class="section" id="gallery-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Visual Journey</div>
+        <h2 class="section-title">Glimpses of the Divine City</h2>
+        <p class="section-subtitle">Every frame captures a story of faith, heritage, and timeless beauty.</p>
+        <div class="divider"><span class="divider-line"></span><span class="divider-icon">📸</span><span class="divider-line"></span></div>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="gallery-filter reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="temple">Temples</button>
+        <button class="filter-btn" data-filter="ghat">Ghats</button>
+        <button class="filter-btn" data-filter="architecture">Architecture</button>
+        <button class="filter-btn" data-filter="panorama">Panoramas</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+        <div class="gallery-item tall" data-category="temple" data-caption="Shri Ram Janmabhoomi Temple - The Magnificent">
+          <img src="images/m64sqpwfp4fc1.jpg" alt="Ram Mandir aerial view">
+          <div class="gallery-item-overlay">
+            <h4>Ram Janmabhoomi</h4>
+            <p>The magnificent temple at golden hour</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-category="temple" data-caption="Hanuman Garhi - The Fortress Temple">
+          <img src="images/2-hanuman-garhi-ayodhya-uttar-pradesh-attr-hero.jpg" alt="Hanuman Garhi">
+          <div class="gallery-item-overlay">
+            <h4>Hanuman Garhi</h4>
+            <p>The hilltop fortress temple</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-category="temple" data-caption="Kanak Bhawan - The Golden Palace">
+          <img src="images/kanak bhawan.webp" alt="Kanak Bhawan">
+          <div class="gallery-item-overlay">
+            <h4>Kanak Bhawan</h4>
+            <p>The golden palace of Sita</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <div class="gallery-item wide" data-category="panorama" data-caption="Ayodhya - A Panoramic View of the Sacred City">
+          <img src="images/ayodhya_option_3.png" alt="Ayodhya panoramic view">
+          <div class="gallery-item-overlay">
+            <h4>Ayodhya Panorama</h4>
+            <p>The sacred city from above</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-category="architecture" data-caption="Ayodhya Temple Architecture - Intricate Carvings">
+          <img src="images/ayodhya_option_4.png" alt="Temple architecture">
+          <div class="gallery-item-overlay">
+            <h4>Sacred Architecture</h4>
+            <p>Intricate stone carvings</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-category="temple" data-caption="Ram Mandir - Divine Architecture in Detail">
+          <img src="images/ram tempal3.jpg" alt="Ram temple close up">
+          <div class="gallery-item-overlay">
+            <h4>Temple Details</h4>
+            <p>Divine architecture up close</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <div class="gallery-item tall" data-category="panorama" data-caption="Ayodhya Evening View - City of Lights">
+          <img src="images/ayodhya_option_5.png" alt="Ayodhya evening">
+          <div class="gallery-item-overlay">
+            <h4>Evening Glory</h4>
+            <p>Ayodhya at dusk</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-category="ghat" data-caption="Guptar Ghat - Sacred Bathing Ghat on Sarayu River">
+          <img src="images/guptar-ghat.jpg" alt="Guptar Ghat">
+          <div class="gallery-item-overlay">
+            <h4>Guptar Ghat</h4>
+            <p>Sacred Sarayu River bank</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-category="temple" data-caption="Nageshwarnath Temple - Ancient Shiva Shrine">
+          <img src="images/nageshwarnath temple.webp" alt="Nageshwarnath Temple">
+          <div class="gallery-item-overlay">
+            <h4>Nageshwarnath</h4>
+            <p>Ancient Shiva temple</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <div class="gallery-item wide" data-category="panorama" data-caption="Ayodhya Skyline - Temples and Heritage">
+          <img src="images/ayodhya_option_6.png" alt="Ayodhya skyline">
+          <div class="gallery-item-overlay">
+            <h4>City Skyline</h4>
+            <p>Temples dotting the horizon</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-category="architecture" data-caption="Ayodhya Temple Artwork - Divine Expressions">
+          <img src="images/ayodhya_extra_hd_3.png" alt="Temple artwork">
+          <div class="gallery-item-overlay">
+            <h4>Temple Artwork</h4>
+            <p>Masterful craftsmanship</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-category="architecture" data-caption="Ayodhya Heritage Architecture - Timeless Beauty">
+          <img src="images/ayodhya_extra_hd_4.png" alt="Heritage architecture">
+          <div class="gallery-item-overlay">
+            <h4>Heritage Architecture</h4>
+            <p>Timeless structures</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-category="panorama" data-caption="Ram Mandir Complex - Aerial Perspective">
+          <img src="images/ayodhya_extra_hd_5.png" alt="Ram Mandir Complex">
+          <div class="gallery-item-overlay">
+            <h4>Temple Complex</h4>
+            <p>Aerial perspective</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-category="architecture" data-caption="Ayodhya Sacred Structures - Heritage Preserved">
+          <img src="images/ayodhya_extra_hd_6.png" alt="Sacred Structures">
+          <div class="gallery-item-overlay">
+            <h4>Sacred Structures</h4>
+            <p>Heritage preserved</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-category="temple" data-caption="Ayodhya Devotion - Spiritual Atmosphere">
+          <img src="images/ayodhya_extra_hd_7.png" alt="Devotional scene">
+          <div class="gallery-item-overlay">
+            <h4>Devotional Spirit</h4>
+            <p>Faith in every moment</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+
+        <div class="gallery-item" data-category="panorama" data-caption="Ayodhya Grand View - The Complete Experience">
+          <img src="images/ayodhya_extra_hd_8.png" alt="Ayodhya grand view">
+          <div class="gallery-item-overlay">
+            <h4>Grand Ayodhya</h4>
+            <p>The complete experience</p>
+          </div>
+          <div class="gallery-zoom-icon">🔍</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <span class="lightbox-close" id="lightbox-close">✕</span>
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev">‹</button>
+      <img src="" alt="Gallery Image" id="lightbox-img">
+      <button class="lightbox-nav lightbox-next" id="lightbox-next">›</button>
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-name"><span>🏛</span> AYODHYA DHAM</div>
+          <p>Your gateway to the spiritual heart of India. Discover ancient temples, sacred rivers, and divine experiences in the birthplace of Lord Ram.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="YouTube">🎬</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="places.html">Places to Visit</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="guide.html">Travel Guide</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Top Temples</h4>
+          <ul class="footer-links">
+            <li><a href="places.html">Ram Janmabhoomi</a></li>
+            <li><a href="places.html">Hanuman Garhi</a></li>
+            <li><a href="places.html">Kanak Bhawan</a></li>
+            <li><a href="places.html">Nageshwarnath</a></li>
+            <li><a href="places.html">Dashrath Mahal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact Info</h4>
+          <ul class="footer-links">
+            <li><a href="#">📍 Ayodhya, UP, India</a></li>
+            <li><a href="#">📞 +91 98765 43210</a></li>
+            <li><a href="#">✉ info@ayodhyadham.in</a></li>
+            <li><a href="#">🕐 Open 24/7</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Ayodhya Dham Travel. All rights reserved.</p>
+        <p>Crafted with 🕉 devotion</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
